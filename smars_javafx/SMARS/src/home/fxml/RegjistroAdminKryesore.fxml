@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.PasswordField?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controllers.RegjistroAdminKryesoreController">
+   <children>
+      <Pane layoutX="2.0" layoutY="-2.0" prefHeight="185.0" prefWidth="943.0" style="-fx-background-color: #2D75E8;">
+         <children>
+            <Label layoutX="126.0" layoutY="14.0" text="Regjistro Adminin" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label layoutX="126.0" layoutY="91.0" text="Ju lutem mbusheni formen! Shto per te shtuar te dhenat. " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+   
+   
+      <TextField fx:id="adminidfield" layoutX="350.0" layoutY="250.0" prefHeight="31.0" prefWidth="502.0" />
+      <TextField fx:id="firstnamefield" layoutX="350.0" layoutY="320.0" prefHeight="31.0" prefWidth="502.0" />
+      <TextField fx:id="lastnamefield" layoutX="350.0" layoutY="380.0" prefHeight="31.0" prefWidth="502.0" />
+       <TextField fx:id="emailfield" layoutX="350.0" layoutY="440.0" prefHeight="31.0" prefWidth="502.0" />
+      <PasswordField fx:id="txtPassword" layoutX="350.0" layoutY="500.0" prefHeight="31.0" prefWidth="502.0"  />
+      
+      <Label layoutX="202.0" layoutY="250.0" text="Admin ID">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="202.0" layoutY="320.0" text="Emri">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="201.0" layoutY="380.0" text="Mbiemri">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="202.0" layoutY="440.0" text="E-Mail">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="202.0" layoutY="500.0" text="Fjalekalimi">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   <Button id="Shtoid" layoutX="588.0" layoutY="555.0" mnemonicParsing="false" onAction="#AddToDatabase" prefHeight="31.0" prefWidth="96.0" text="Shto" />
+</AnchorPane>
+

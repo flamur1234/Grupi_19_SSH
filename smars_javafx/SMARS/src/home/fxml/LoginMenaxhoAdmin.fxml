@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="943.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controllers.LoginMenaxhoAdminController">
+    <children>
+        <Pane prefHeight="173.0" prefWidth="980.0" style="-fx-background-color: #2D75E8;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label layoutX="126.0" layoutY="14.0" text="Sign in" textFill="WHITE">
+                    <font>
+                        <Font size="48.0" />
+                    </font>
+                </Label>
+                <Label layoutX="126.0" layoutY="91.0" text="Miresevini ne Menaxho Admin! Sign in per te vazhduar " textFill="WHITE">
+                    <font>
+                        <Font size="13.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Button fx:id="kycuMenaxhoAdmin" layoutX="363.0" layoutY="410.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="48.0" prefWidth="172.0" text="Kycu">
+         <font>
+            <Font name="Segoe UI Light" size="24.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Button>
+      <TextField fx:id="txtUsername2" layoutX="283.0" layoutY="235.0" prefHeight="31.0" prefWidth="412.0" promptText="Shenoni emrin e perdoruesit" />
+      <PasswordField fx:id="txtPassword2" layoutX="283.0" layoutY="298.0" prefHeight="31.0" prefWidth="412.0" promptText="Shenoni fjalekalimin" />
+      <Label layoutX="193.0" layoutY="240.0" text="Perdoruesi" />
+      <Label layoutX="195.0" layoutY="303.0" text="Fjalekalimi" />
+    </children>
+</AnchorPane>
