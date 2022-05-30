@@ -1,18 +1,16 @@
+// In some parts copied from:
+// http://closure-library.googlecode.com/svn/trunk/closure/goog/
+// string/string_test.html
+
 "use strict";
 
-var toInteger = require("../../../number/to-integer")
-  , value     = require("../../../object/valid-value")
-  , isValue   = require("../../../object/is-value")
-  , min       = Math.min
-  , max       = Math.max;
-
-module.exports = function (searchString/*, endPosition*/) {
-	var self, start, endPos;
-	self = String(value(this));
-	searchString = String(searchString);
-	endPos = arguments[1];
-	start =
-		(isValue(endPos) ? min(max(toInteger(endPos), 0), self.length) : self.length) -
-		searchString.length;
-	return start < 0 ? false : self.indexOf(searchString, start) === start;
+module.exports = function (t, a) {
+	a(t.call("abc", ""), true, "Empty needle");
+	a(t.call("abcd", "cd"), true, "Ends with needle");
+	a(t.call("abcd", "abcd"), true, "Needle equals haystack");
+	a(t.call("abcd", "ab"), false, "Doesn't end with needle");
+	a(t.call("abc", "defg"), false, "Length trick");
+	a(t.call("razdwa", "zd", 3), false, "Position: false");
+	a(t.call("razdwa", "zd", 4), true, "Position: true");
+	a(t.call("razdwa", "zd", 5), false, "Position: false #2");
 };

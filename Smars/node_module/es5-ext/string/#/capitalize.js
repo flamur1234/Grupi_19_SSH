@@ -1,8 +1,9 @@
 "use strict";
 
-var value = require("../../object/valid-value");
-
-module.exports = function () {
-	var str = String(value(this));
-	return str.charAt(0).toUpperCase() + str.slice(1);
+module.exports = function (t, a) {
+	a(t.call("raz"), "Raz", "Word");
+	a(t.call("BLA"), "BLA", "Uppercase");
+	a(t.call(""), "", "Empty");
+	a(t.call("a"), "A", "One letter");
+	a(t.call("this is a test"), "This is a test", "Sentence");
 };

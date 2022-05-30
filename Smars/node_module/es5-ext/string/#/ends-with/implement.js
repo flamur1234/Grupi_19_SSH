@@ -1,10 +1,5 @@
 "use strict";
 
-if (!require("./is-implemented")()) {
-	Object.defineProperty(String.prototype, "endsWith", {
-		value: require("./shim"),
-		configurable: true,
-		enumerable: false,
-		writable: true
-	});
-}
+var isImplemented = require("../../../../string/#/ends-with/is-implemented");
+
+module.exports = function (a) { a(isImplemented(), true); };

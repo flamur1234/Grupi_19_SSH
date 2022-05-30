@@ -1,9 +1,7 @@
 "use strict";
 
-var replace = String.prototype.replace, re = /([A-Z])/g;
-
-module.exports = function () {
-	var str = replace.call(this, re, "-$1").toLowerCase();
-	if (str[0] === "-") str = str.slice(1);
-	return str;
+module.exports = function (t, a) {
+	a(t.call("razDwaTRzy4yFoo45My"), "raz-dwa-t-rzy4y-foo45-my");
+	a(t.call("razDwaTRzy4yFoo45My-"), "raz-dwa-t-rzy4y-foo45-my-");
+	a(t.call("razDwaTRzy4yFoo45My--"), "raz-dwa-t-rzy4y-foo45-my--");
 };

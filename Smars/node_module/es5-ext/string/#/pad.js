@@ -1,16 +1,24 @@
 "use strict";
 
-var toInteger = require("../../number/to-integer")
-  , value     = require("../../object/valid-value")
-  , repeat    = require("./repeat")
-  , abs       = Math.abs
-  , max       = Math.max;
+var partial = require("../../../function/#/partial");
 
-module.exports = function (fill/*, length*/) {
-	var self = String(value(this)), sLength = self.length, length = arguments[1];
+module.exports = {
+	Left: function (t, a) {
+		t = partial.call(t, "x", 5);
 
-	length = isNaN(length) ? 1 : toInteger(length);
-	fill = repeat.call(String(fill), abs(length));
-	if (length >= 0) return fill.slice(0, max(0, length - sLength)) + self;
-	return self + (sLength + length >= 0 ? "" : fill.slice(length + sLength));
+		a(t.call("yy"), "xxxyy");
+		a(t.call(""), "xxxxx", "Empty string");
+
+		a(t.call("yyyyy"), "yyyyy", "Equal length");
+		a(t.call("yyyyyyy"), "yyyyyyy", "Longer");
+	},
+	Right: function (t, a) {
+		t = partial.call(t, "x", -5);
+
+		a(t.call("yy"), "yyxxx");
+		a(t.call(""), "xxxxx", "Empty string");
+
+		a(t.call("yyyyy"), "yyyyy", "Equal length");
+		a(t.call("yyyyyyy"), "yyyyyyy", "Longer");
+	}
 };

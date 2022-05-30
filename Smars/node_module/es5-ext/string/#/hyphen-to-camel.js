@@ -1,6 +1,7 @@
 "use strict";
 
-var replace = String.prototype.replace, re = /-([a-z0-9])/g;
-var toUpperCase = function (ignored, a) { return a.toUpperCase(); };
-
-module.exports = function () { return replace.call(this, re, toUpperCase); };
+module.exports = function (t, a) {
+	a(t.call("raz-dwa-t-rzy-4y-rtr4-tiu-45-pa"), "razDwaTRzy4yRtr4Tiu45Pa");
+	a(t.call("raz-dwa-t-rzy-4y-rtr4-tiu-45-pa-"), "razDwaTRzy4yRtr4Tiu45Pa-");
+	a(t.call("raz-dwa-t-rzy-4y-rtr4-tiu-45-pa--"), "razDwaTRzy4yRtr4Tiu45Pa--");
+};

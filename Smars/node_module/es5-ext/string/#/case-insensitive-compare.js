@@ -1,7 +1,7 @@
 "use strict";
 
-var toLowerCase = String.prototype.toLowerCase;
-
-module.exports = function (other) {
-	return toLowerCase.call(this).localeCompare(toLowerCase.call(String(other)));
+module.exports = function (t, a) {
+	a(t.call("AA", "aa"), 0, "Same");
+	a.ok(t.call("Amber", "zebra") < 0, "Less");
+	a.ok(t.call("Zebra", "amber") > 0, "Greater");
 };
